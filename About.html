@@ -4,124 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About RS Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            text-align: center;
+            background: #40e1a9;
+            padding: 60px 20px;
+        }
+
+        .box h1 {
+            font-size: 50px;
+            color: #333;
+        }
+
+        .box p {
+            font-size: 22px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .hello {
+            max-width: 500px;
+        }
+
+        .hello h1 {
+            font-size: 42px;
+            color: #d2691e;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .hello p {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .im img {
+            width: 450px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission {
+            background: #ebbbbb;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .mission h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #d2691e;
+        }
+
+        .mission p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .footer p {
+            background: #b22222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        /* ✅ Responsive Design */
+        @media (max-width: 992px) {
+            .box h1 {
+                font-size: 40px;
+            }
+
+            .hello h1 {
+                font-size: 36px;
+            }
+
+            .hello p {
+                font-size: 18px;
+            }
+
+            .im img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hello h1 {
+                font-size: 32px;
+            }
+
+            .hello p {
+                font-size: 17px;
+                text-align: center;
+            }
+
+            .box h1 {
+                font-size: 35px;
+            }
+
+            .box p {
+                font-size: 18px;
+            }
+
+            .mission h1 {
+                font-size: 28px;
+            }
+
+            .mission p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                padding: 40px 15px;
+            }
+
+            .box h1 {
+                font-size: 28px;
+            }
+
+            .hello h1 {
+                font-size: 26px;
+            }
+
+            .hello p {
+                font-size: 16px;
+            }
+
+            .mission h1 {
+                font-size: 24px;
+            }
+
+            .mission p {
+                font-size: 15px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding-top: 0;
-    }
-
-    .box {
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        background: #40e1a9;
-        padding: 50px;
-
-    }
-
-    .box h1 {
-        font-size: 50px;
-    }
-
-    .box p {
-        font-size: 25px;
-    }
-
-    .im img {
-        width: 450px;
-        height: 400px;
-    }
-
-    .hello h1 {
-        text-align: center;
-    }
-
-    .container {
-        display: flex;
-        margin: 20px;
-        padding: 10px;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .hello {
-        width: 500px;
-    }
-
-    .hello h1 {
-        font-size: 50px;
-    }
-
-    .hello p {
-        font-size: 25px;
-        text-align: justify;
-    }
-
-    .footer p {
-        background: #b22222;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        font-size: 15px;
-
-    }
-    .mission {
-        background: #ebbbbb;
-        text-align: center;
-        padding: 50px;
-    }
-    .mission h1{
-          font-size: 30px;
-      margin-bottom: 20px;
-      color:#d2691e;
-    }
-    .mission p{
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-      font-size: 17px;
-    }
-</style>
-
 
 <body>
     <div class="box">
-        <h1> About RS Restaurant</h1>
-        <p>Where Taste meets Tradition</p>
+        <h1>About RS Restaurant</h1>
+        <p>Where Taste Meets Tradition</p>
     </div>
+
     <div class="container">
         <div class="hello">
-            <h1>Welocme To RS Restaurant</h1>
+            <h1>Welcome To RS Restaurant</h1>
             <p>RS Restaurant was founded with a passion to serve authentic flavors and heartwarming meals. Since 2022,
-                we
-                have been delivering a rich dining experince with a perfect blend of traditional and modern taste. From
-                sizzlinng starter to delifhtful desserts- every dish is carafted with love and fresh ingredients.
-                Whether
-                you're dining with family or celebrating with friends, RS Restaurant is perfect destination for food
-                lovers.
-                Your satisfaction is our top priority.</p>
+                we have been delivering a rich dining experience with a perfect blend of traditional and modern taste.
+                From sizzling starters to delightful desserts — every dish is crafted with love and fresh ingredients.
+                Whether you're dining with family or celebrating with friends, RS Restaurant is the perfect destination
+                for food lovers. Your satisfaction is our top priority.</p>
         </div>
         <div class="im">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/d5/bb/74/lounge.jpg?w=900&h=500&s=1">
-
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/d5/bb/74/lounge.jpg?w=900&h=500&s=1"
+                alt="RS Restaurant Interior" loading="lazy">
         </div>
     </div>
+
     <div class="mission">
         <h1>Our Mission & Vision</h1>
-        <p>Our Mision is to bring happiness through flavors- offering delicious, hygienic and affordable food that feel
-            just like home. We dream of becoming the most trusted restaurant in town, known for our quality, service,
-            and customer satisfaction.</p>
+        <p>Our mission is to bring happiness through flavors — offering delicious, hygienic, and affordable food that
+            feels just like home. We dream of becoming the most trusted restaurant in town, known for our quality,
+            service, and customer satisfaction.</p>
     </div>
+
     <footer>
         <div class="footer">
             <p>&copy; 2025 RS Restaurant | All Rights Reserved</p>
         </div>
     </footer>
-
-
-
-
 </body>
 
 </html>
