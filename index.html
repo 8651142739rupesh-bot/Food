@@ -35,6 +35,7 @@
       display: flex;
       list-style: none;
       gap: 25px;
+      transition: all 0.3s ease;
     }
 
     nav ul li a {
@@ -50,6 +51,14 @@
     nav ul li a.active {
       background: #179fde;
       color: #fff;
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #179fde;
     }
 
     /* Hero Section */
@@ -278,27 +287,28 @@
 
     /* Responsive Menu */
     @media (max-width: 800px) {
-      nav ul {
-        display: none;
+      .menu-toggle {
+        display: block;
       }
 
-      nav.active ul {
-        display: flex;
-        flex-direction: column;
+      nav ul {
         position: absolute;
         top: 70px;
-        right: 0;
-        background: white;
+        right: -100%;
         width: 100%;
+        flex-direction: column;
+        background: white;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         padding: 20px 0;
       }
 
-      .menu-toggle {
-        font-size: 28px;
-        cursor: pointer;
-        color: #179fde;
+      nav.active ul {
+        right: 0;
+      }
+
+      nav ul li {
+        margin: 15px 0;
       }
     }
 
@@ -311,10 +321,11 @@
 </head>
 
 <body>
+  <!-- Navbar -->
   <header>
     <nav>
       <div class="logo">RS Restaurant</div>
-     
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="About.html">About</a></li>
@@ -426,6 +437,11 @@
     </div>
   </footer>
 
- 
+  <!-- JS for Responsive Menu -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
