@@ -4,176 +4,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-    }
+    <title>RS Restaurant | Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
-    .box1 {
-        width: 200px;
-        height: 400px;
+        body {
+            background-color: #f9f9f9;
+        }
 
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
        
+        .head {
+            background: linear-gradient(to right, #b22222, #ff6347);
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
 
-    }
+      
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px;
+        }
 
-    .box1 img {
-        width: 200px;
-        border-radius: 12px 12px 0px 0px;
-    }
+        .box1 {
+            background: #fff;
+            width: 260px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .box1 h3 {
-        text-align: center;
+        .box1:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-    }
+        .box1 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-    .head {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        font-weight: 900;
-        text-align: center;
-        text-shadow: 0 0 6px rgba(255, 255, 255, 0.9),
-            0 0 12px rgba(0, 150, 255, 0.6);
-        background: #012033;
+        .info {
+            padding: 15px;
+            text-align: center;
+        }
 
+        .info h3 {
+            color: #b22222;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
 
-    }
+        .info p {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
 
-    .box1:hover {
-        transform: scale(1.05);
-    }
+        .price {
+            font-weight: bold;
+            color: #2e8b57;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
 
-    .box1 p {
-        text-align: center;
-        font-size: 18px;
-    }
-    .bt{
-        width: 100px;
-        padding: 5px;
-        border: none;
-        background: #d87751;
-        border-radius: 17px;
-        margin-left: 47px;
-        margin-top: 15px;
-        cursor: pointer;
-    }
-    .bt:hover{
-background: #48cd9a;
-    }
-</style>
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .bt {
+            background: #ff6347;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .bt:hover {
+            background: #2e8b57;
+        }
+
+        footer {
+            background: #012033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
 
 <body>
-    <div class="head">RS Resturent <br>Menu</div><br>
+
+    <div class="head">🍽️ RS Restaurant Menu 🍽️</div>
+
     <div class="container">
 
-        <div class="box1 h1"><img
+        <div class="box1">
+            <img
                 src="https://assets.gqindia.com/photos/6213cbed18140d747a9b0a6e/16:9/w_1920,h_1080,c_limit/new%20restaurant%20menus%20in%20Mumbai.jpg">
-            <h3>Chowmein</h3>
-            <P>Stir-fried noodles tossed with veggies and sauces for that perfect street-style taste</P>
-            <button class="bt">Order Now </button>
-            <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>Chowmein</h3>
+                <p>Street-style stir-fried noodles tossed with veggies and sauces.</p>
+                <div class="price">₹120</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h2"><img src="https://qul.imgix.net/fcf0abc5-9e48-4473-80fa-f7bfe0c67d80/512152_sld.jpg">
-            <h3>Burger</h3>
-            <p>Juicy patty layered with cheese, veggies, and special sauce in a soft bun.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+
+        <div class="box1">
+            <img src="https://qul.imgix.net/fcf0abc5-9e48-4473-80fa-f7bfe0c67d80/512152_sld.jpg">
+            <div class="info">
+                <h3>Burger</h3>
+                <p>Juicy patty layered with cheese, veggies, and sauce in a soft bun.</p>
+                <div class="price">₹150</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h3"><img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content9555.jpg">
-            <h3>Sandwich</h3>
-            <p>Fresh bread stuffed with veggies, cheese, and flavorful mayo spread.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+
+        <div class="box1">
+            <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content9555.jpg">
+            <div class="info">
+                <h3>Sandwich</h3>
+                <p>Fresh bread stuffed with veggies, cheese, and creamy mayo.</p>
+                <div class="price">₹90</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h4"><img
+
+        <div class="box1">
+            <img
                 src="https://img500.exportersindia.com/product_images/bc-500/2023/9/12301398/paneer-momos-1690436501-7001753.jpeg">
-            <h3>Momo</h3>
-            <p>Steamed dumplings stuffed with spiced veggies or chicken, served with chili dip.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>Momos</h3>
+                <p>Steamed dumplings filled with veggies or chicken & spicy dip.</p>
+                <div class="price">₹80</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h5"><img
+
+        <div class="box1">
+            <img
                 src="https://media.istockphoto.com/id/637165584/photo/portion-of-french-fries-on-catering-platter.jpg?s=612x612&w=0&k=20&c=WRmdE5FB7hG32jH2A1L0t0c3f-ec5zZlmJWUXNU6QmM=">
-            <h3>French Fries</h3>
-            <p>Crispy golden fries lightly salted — the perfect snack anytime.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>French Fries</h3>
+                <p>Crispy golden fries lightly salted — the perfect snack.</p>
+                <div class="price">₹70</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h6"><img src="https://b.zmtcdn.com/data/dish_photos/670/a0528d2356ff13c7ffe90e5f94c5b670.jpg">
-            <h3> Fried Rice</h3>
-            <p>Fluffy rice stir-fried with vegetables, soy sauce, and your choice of protein.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+
+        <div class="box1">
+            <img src="https://b.zmtcdn.com/data/dish_photos/670/a0528d2356ff13c7ffe90e5f94c5b670.jpg">
+            <div class="info">
+                <h3>Fried Rice</h3>
+                <p>Fluffy rice stir-fried with veggies and soy sauce.</p>
+                <div class="price">₹130</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h7"><img
+
+        <div class="box1">
+            <img
                 src="https://preview.redd.it/fried-chicken-biryani-recipe-step-by-step-chicken-biryani-v0-xxwqpu8xjlxc1.jpeg?width=640&crop=smart&auto=webp&s=0f4f7bbed2bd563eba8a77c684830808efe5e1f0">
-            <h3>Chicken Biryani</h3>
-            <p>Aromatic rice cooked with tender chicken pieces and signature Indian spices.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>Chicken Biryani</h3>
+                <p>Aromatic rice cooked with chicken and Indian spices.</p>
+                <div class="price">₹200</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h8"><img
+
+        <div class="box1">
+            <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/016/285/734/small_2x/paneer-khus-khus-curry-or-cottage-cheese-posto-masala-made-using-poppy-seeds-indian-recipe-free-photo.jpg">
-            <h3>Shahi Paneer</h3>
-            <p>Rich and creamy paneer curry cooked in royal spices and butter gravy, served hot with naan or rice.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>Shahi Paneer</h3>
+                <p>Rich & creamy paneer curry in royal buttery gravy.</p>
+                <div class="price">₹180</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h9"><img
-                src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?cs=srgb&dl=pexels-daniela-elena-tentis-118658-262959.jpg&fm=jpg">
-            <h3>Fried Fish</h3>
-            <p>Crispy golden fried fish served with tangy lemon and mint chutney.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
-        </div>
-        <div class="box1 h10"><img
-                src="https://lh3.googleusercontent.com/7ok94Lqqw_wzbjN8Z0T4UVSNAYUc3zvKqL4nYGFJeUxp7ztVjtxc2QE9Iy350eZAViG3eWzU6ozDsAJ9rIi8fz18w9kLmcdKQxDUaTCO=w1200-rw">
-            <h3>Maggi</h3>
-            <p>Quick and tasty noodles cooked with vegetables and our secret masala twist.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
-        </div>
-        <div class="box1 h11"><img
+
+        <div class="box1">
+            <img
                 src="https://www.eatingwell.com/thmb/6HYM2Tya8CJGxPo1rBAMRGDo8CY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Why-Does-Pizza-Taste-So-Much-Better-From-Restaurants-3fdcc2c1c04742209a8d5030127dae89.jpg">
-            <h3>Pizza</h3>
-            <p>Hot and cheesy pizza baked to perfection with fresh toppings and herbs.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
+            <div class="info">
+                <h3>Pizza</h3>
+                <p>Cheesy pizza baked to perfection with fresh toppings.</p>
+                <div class="price">₹220</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
-        <div class="box1 h12"><img
-                src="https://b.zmtcdn.com/data/pictures/1/21749321/e73dce3a499a1bc3030eb07b5b303f6d_o2_featured_v2.jpg">
-            <h3>Hot Dog</h3>
-            <p>Grilled sausage with onions, sauce, and mustard in a soft bun</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
-        </div>
-        <div class="box1 h13"><img src="https://healthy-cooking-with-mitha.com/wp-content/uploads/2020/08/dsc_1222.jpg">
-            <h3>Masala Dosa</h3>
-            <p>Crispy dosa filled with spicy mashed potatoes, served with chutney and sambar.</p>
-            <button class="bt">Order Now </button>
-             <button class="bt">Add to cart</button>
-        </div>
-        <div class="box1 h14"><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4sQNE-u5tYhaSFxP_JqNod1v4iyphghmmHg&s">
-            <h3>Idli</h3>
-            <p>Soft steamed rice cakes served with coconut chutney and hot sambar.</p>
-             <button class="bt">Order Now </button>
-              <button class="bt">Add to cart</button>
+
+        <div class="box1">
+            <img
+                src="https://www.unileverfoodsolutions.com.au/dam/global-ufs/mcos/anz/calcmenu/recipe/killer-recipes-update/californian-egg-roll-main-header-anz.jpg">
+            <div class="info">
+                <h3>Egg Roll</h3>
+                <p>Freshly rolled, perfectly fried — taste the crunch of our egg rolls.</p>
+                <div class="price">₹70</div>
+                <div class="buttons">
+                    <button class="bt">Order Now</button>
+                    <button class="bt">Add to Cart</button>
+                </div>
+            </div>
         </div>
 
     </div>
+
+    <footer>
+        © 2025 RS Restaurant | All Rights Reserved
+    </footer>
+
 </body>
 
 </html>
