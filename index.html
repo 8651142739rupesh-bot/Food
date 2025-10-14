@@ -13,7 +13,6 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    /* Navbar */
     nav {
       display: flex;
       justify-content: space-between;
@@ -24,6 +23,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      overflow-x: hidden;
     }
 
     .logo {
@@ -54,7 +54,6 @@
       color: #fff;
     }
 
-    /* Hamburger Menu */
     .menu-toggle {
       display: none;
       font-size: 28px;
@@ -62,7 +61,6 @@
       color: #179fde;
     }
 
-    /* Hero Section */
     .box2 {
       text-align: center;
       background-image: url(https://i.pinimg.com/736x/9e/ea/b0/9eeab0fb045184bde87504e12a564b50.jpg);
@@ -118,7 +116,6 @@
       transform: scale(1.05);
     }
 
-    /* About Section */
     .container {
       display: flex;
       align-items: center;
@@ -156,7 +153,6 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
 
-    /* Specials Section */
     h1.section-title {
       color: red;
       font-size: 40px;
@@ -202,7 +198,6 @@
       font-weight: bold;
     }
 
-    /* Reviews Section */
     .reviews-section {
       background: #fffaf3;
       padding: 60px 8%;
@@ -259,7 +254,6 @@
       margin-bottom: 8px;
     }
 
-    /* Contact Section */
     .contact {
       text-align: center;
       background: #212727;
@@ -280,7 +274,6 @@
       margin: 20px 15px;
     }
 
-    /* Footer */
     .footer {
       font-size: 16px;
       text-align: center;
@@ -289,22 +282,27 @@
       color: white;
     }
 
-    /* Responsive Menu */
     @media (max-width: 800px) {
+      body {
+        overflow-x: hidden;
+      }
+
       .menu-toggle {
         display: block;
       }
 
       nav ul {
-        position: absolute;
+        position: fixed;
         top: 70px;
         right: -100%;
         width: 100%;
+        height: calc(100vh - 70px);
         flex-direction: column;
         background: white;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
+        transition: right 0.3s ease;
       }
 
       nav.active ul {
@@ -313,6 +311,10 @@
 
       nav ul li {
         margin: 15px 0;
+      }
+
+      html, body {
+        overscroll-behavior: none;
       }
     }
 
@@ -333,7 +335,6 @@
 </head>
 
 <body>
-  <!-- Navbar -->
   <header>
     <nav>
       <div class="logo">RS Restaurant</div>
@@ -342,39 +343,32 @@
         <li><a href="#" class="active">Home</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="category.html">Category</a></li>
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="menu1.html">Menu</a></li>
         <li><a href="loginpage.html">SignUp</a></li>
         <li><a href="c.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="box2">
     <h1>EAT RIGHT FOOD</h1>
     <p>Eat healthy, it is good for your health.</p>
     <a href="menu.html" class="btn">Menu</a>
   </section>
 
-  <!-- About -->
   <section class="container">
     <div class="hero">
       <p>About Us</p>
       <h1>We've been making healthy food for 10 years</h1>
-      <p>RS Restaurant ki shuruaat ek chhote se sapne se hui — “har kisi ko sasta, swadisht aur swachh khana mile.” Aaj
-        hum local ingredients aur traditional recipes ko modern touch ke saath serve karte hain.</p>
-      <p>Har dish humare chef ke junoon aur pyar se taiyaar hoti hai. Humara vaada hai — saaf, surakshit aur lazeez
-        khana, jisse aapka har bite yaadgar ban jaaye.</p>
-      <p>Ghar jaisa swad, modern ambience aur friendly service — yahi hai <strong>RS Restaurant</strong> ka asli
-        flavour.</p>
+      <p>RS Restaurant ki shuruaat ek chhote se sapne se hui — “har kisi ko sasta, swadisht aur swachh khana mile.” Aaj hum local ingredients aur traditional recipes ko modern touch ke saath serve karte hain.</p>
+      <p>Har dish humare chef ke junoon aur pyar se taiyaar hoti hai. Humara vaada hai — saaf, surakshit aur lazeez khana, jisse aapka har bite yaadgar ban jaaye.</p>
+      <p>Ghar jaisa swad, modern ambience aur friendly service — yahi hai <strong>RS Restaurant</strong> ka asli flavour.</p>
     </div>
     <div class="im">
-      <img
-        src="https://res.cloudinary.com/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/47/29dea0176041c5a0ae640a71dbe24f/:original">
+      <img src="https://res.cloudinary.com/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/47/29dea0176041c5a0ae640a71dbe24f/:original">
     </div>
   </section>
 
-  <!-- Specials -->
   <h1 class="section-title">Our Special Dishes</h1>
   <section class="special">
     <div class="sepical1">
@@ -385,9 +379,7 @@
     </div>
 
     <div class="sepical1">
-      <img
-        src="https://celloindia.co.in/cdn/shop/articles/09e4acfe3778136b196f0202b45f49d5_60e19218-7883-44c2-987f-76a01e6f3606_394x.jpg?v=1739959151"
-        alt="Paneer Butter Masala">
+      <img src="https://celloindia.co.in/cdn/shop/articles/09e4acfe3778136b196f0202b45f49d5_60e19218-7883-44c2-987f-76a01e6f3606_394x.jpg?v=1739959151" alt="Paneer Butter Masala">
       <h4>Paneer Butter Masala</h4>
       <p>Soft paneer cubes in rich creamy tomato gravy.</p>
       <p class="price">₹150</p>
@@ -401,7 +393,6 @@
     </div>
   </section>
 
-  <!-- Reviews Section -->
   <section class="reviews-section">
     <div class="headrev">
       <h3>What Our Customers Say</h3>
@@ -429,39 +420,35 @@
         <h4>— Ritesh Kumar </h4>
       </div>
       <div class="review">
-        <img
-          src="ankit.jpg">
+        <img src="ankit.jpg">
         <div class="stars">★★★★★</div>
         <p>“Biryani was flavorful and hot, staff was kind and quick.”</p>
         <h4>— Ankit Kumar</h4>
       </div>
 
       <div class="review">
-        <img src="https://i.scdn.co/image/ab676161000051741b15c2ad299fdcf864a09742">
+        <img src="https://photosmint.com/wp-content/uploads/beautiful-cute-simple-girl-pic-12-years-indian.jpeg">
         <div class="stars">★★★★☆</div>
         <p>“Very neat place, food tasted amazing. Would love to come again.”</p>
         <h4>— Anjali Kumari</h4>
       </div>
 
       <div class="review">
-        <img src="https://i.pinimg.com/736x/5a/ab/f8/5aabf84d67477f77d3bb8f0fe4cfcd17.jpg">
+        <img src="manash.jpg">
         <div class="stars">★★★★★</div>
         <p>“Service was smooth, pizza was cheesy and soft. A great place!”</p>
-        <h4>— Rocky Kumar</h4>
+        <h4>— Manash Kumar</h4>
       </div>
 
-
       <div class="review">
-        <img
-          src="shambhavi.jpg">
+        <img src="shambhavi.jpg">
         <div class="stars">★★★★☆</div>
         <p>“Loved the flavor of the food, atmosphere was warm and inviting.”</p>
         <h4>— Shambhavi Kumari</h4>
       </div>
 
       <div class="review">
-        <img
-          src="harsh.jpg">
+        <img src="harsh.jpg">
         <div class="stars">★★★☆☆</div>
         <p>“Good place to hang out, tasty meals and friendly staff service.”</p>
         <h4>— Harshvardhan</h4>
@@ -469,7 +456,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact">
     <h1>Visit Us</h1>
     <div class="div1">
@@ -486,17 +472,17 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer">
-      <p>&copy; 2025 RS Restaurant | All Rights Reserved | Designed with ❤️ by Rupesh Kumar</p>
+      <p>&copy; 2025 RS Restaurant | All Rights Reserved | Designed with ❤ by Rupesh Kumar</p>
     </div>
   </footer>
 
-  <!-- JS for Responsive Menu -->
   <script>
     function toggleMenu() {
-      document.querySelector('nav').classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
     }
   </script>
 </body>
