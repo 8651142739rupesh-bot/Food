@@ -17,6 +17,54 @@
       font-family: 'Poppins', Arial, sans-serif;
     }
 
+     nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow-x: hidden;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: rgb(30, 214, 162);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #179fde;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #179fde;
+    }
+
     body {
       background-color: #fffdf9;
       color: #333;
@@ -321,6 +369,7 @@
 
 </body>
 </html>
+
 
 
 
