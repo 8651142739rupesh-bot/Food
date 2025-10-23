@@ -11,6 +11,54 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow-x: hidden;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: rgb(30, 214, 162);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #179fde;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #179fde;
+    }
+    
     body{
       background: #fff8f0;
     }
@@ -53,7 +101,20 @@
   </style>
 </head>
 <body>
-
+<nav>
+      <div class="logo">RS Restaurant</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="category.html">Category</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="loginpage.html">SignUp</a></li>
+        <li><a href="c.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
   <h1>🍴 RS Restaurant Categories 🍴</h1>
   <div class="categories">
     <div class="card">
@@ -103,4 +164,5 @@
   </div>
 
 </body>
+
 </html>
